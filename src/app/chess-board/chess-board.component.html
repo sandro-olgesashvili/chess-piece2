@@ -1,0 +1,17 @@
+<div *ngFor="let items of board; let i = index" class="board">
+  <div
+    *ngFor="let item of items; let j = index"
+    [ngClass]="{ red: onOff && selected.x === i - 2 && selected.y === j + 1 }"
+    [ngClass]="{ red: onOff && selected.x === i - 1 && selected.y === j + 2 }"
+    [ngClass]="{ red: onOff && selected.x === i - 1 && selected.y === j - 2 }"
+    [ngClass]="{ red: onOff && selected.x === i - 2 && selected.y === j - 1 }"
+    [ngClass]="{ red: onOff && selected.x === i + 2 && selected.y === j + 1 }"
+    [ngClass]="{ red: onOff && selected.x === i + 1 && selected.y === j + 2 }"
+    [ngClass]="{ red: onOff && selected.x === i + 1 && selected.y === j - 2 }"
+    [ngClass]="{ red: onOff && selected.x === i + 2 && selected.y === j - 1 }"
+    [ngClass]="selected.x === i && selected.y === j ? 'horse' : ''"
+    class="item"
+    (click)="clickCon(i, j)"
+  >
+  </div>
+</div>

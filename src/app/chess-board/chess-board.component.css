@@ -1,0 +1,28 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 560px;
+}
+
+.item {
+  width: 70px;
+  height: 70px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  cursor: pointer;
+}
+
+.board:nth-child(odd) .item:nth-child(even) {
+  background: #000;
+}
+.board:nth-child(even) .item:nth-child(odd) {
+  background: #000;
+}
+
+
+.red {
+  background-color: red !important;
+}
